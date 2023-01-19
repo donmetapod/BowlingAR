@@ -33,6 +33,7 @@ public class GameState : ScriptableObject
     [SerializeField] private int _remainingBalls;
     [SerializeField] private int _currentTurn;
     [SerializeField] private int _strikeCounter = 0;
+    [SerializeField] private int _strikeExtraPoints = 10;
     public int MaxTurns = 10;
     public float _throwPowerMultiplier = 0.0025f;
     public int TurnMaxDuration = 10;
@@ -95,8 +96,14 @@ public class GameState : ScriptableObject
         set
         {
             _strikeCounter = value;
-            Messenger.Instance.EnqueueMessage($"{_strikeCounter}", 5);
+            // Messenger.Instance.EnqueueMessage($"{_strikeCounter}", 5);
         }
+    }
+
+    public int StrikeExtraPoints
+    {
+        get => _strikeExtraPoints;
+        set => _strikeExtraPoints = value;
     }
     #endregion
     

@@ -71,6 +71,7 @@ public class UIController : MonoBehaviour
 
     void ShowGameOverScreen()
     {
+        _strikeUI.SetActive(false);
         _gameOverScreen.SetActive(true);
     }
 

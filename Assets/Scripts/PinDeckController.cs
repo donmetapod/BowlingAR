@@ -12,7 +12,7 @@ public class PinDeckController : MonoBehaviour
     [SerializeField] private GameState _gameState;
     private Vector3 _pinDeckSpawnPosition;
     private Quaternion _pinDeckRotation;
-
+    private Transform pinDeckSpawnPoint;
     #if UNITY_EDITOR
     private bool _pinDeckCreated;
     #endif
@@ -68,6 +68,16 @@ public class PinDeckController : MonoBehaviour
         GameObject pinDeckBaseClone = Instantiate(_pinDeckBasePrefab, _pinDeckPlacer.position, Quaternion.LookRotation(directionTowardsCamera, Vector3.up));
         float zDistance = Mathf.Abs((pinDeckBaseClone.transform.position - _arCamera.position).z);
         
+        //Detach lane main piece
+        pinDeckBaseClone.transform.Find("Track_main").SetParent(null);
+        
+        // Creates position and rotation for new pin deck 
+        pinDeckSpawnPoint = pinDeckBaseClone.transform.Find("PinDeckSpawnPoint");
+        pinDeckSpawnPoint.SetParent(null);
+        
+        //Creates a new pin deck
+        Instantiate(_pinDeckPrefab, pinDeckSpawnPoint.position, pinDeckSpawnPoint.rotation);
+        
         // Increases the size of pin deck base until reaches camera position
         while (pinDeckBaseClone.transform.localScale.z > -zDistance)
         {
@@ -80,12 +90,10 @@ public class PinDeckController : MonoBehaviour
         // BoxCollider baseCollider = pinDeckBaseClone.transform.Find("PinDeckBase").GetComponent<BoxCollider>();
         //_throwingLine.position = baseCollider.center - baseCollider.bounds.extents;
         
-        // Creates position and rotation for new pin deck 
-        _pinDeckSpawnPosition = _pinDeckPlacer.position - _pinDeckPlacer.forward;
-        _pinDeckRotation = Quaternion.LookRotation(directionTowardsCamera, Vector3.up);
         
-        //Creates a new pin deck
-        Instantiate(_pinDeckPrefab, _pinDeckSpawnPosition, _pinDeckRotation);
+        // _pinDeckRotation = Quaternion.LookRotation(directionTowardsCamera, Vector3.up);
+        
+        
 
         // Go to next state after first pin deck is created
         _gameState.CurrentGameState = GameState.GameStateEnum.SetupBalls;
@@ -95,8 +103,7 @@ public class PinDeckController : MonoBehaviour
     // Creates a new deck for each throw
     void PlaceNewDeckOnLane()
     {
-        // Vector3 directionTowardsCamera = _pinDeckPlacer.position - _arCamera.position;
-        Instantiate(_pinDeckPrefab, _pinDeckSpawnPosition, _pinDeckRotation);
+        Instantiate(_pinDeckPrefab, pinDeckSpawnPoint.position, pinDeckSpawnPoint.rotation);
         _gameState.CurrentGameState = GameState.GameStateEnum.ReadyToThrow;
     }
 }

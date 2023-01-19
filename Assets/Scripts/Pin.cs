@@ -4,6 +4,8 @@ using UnityEngine;
 public class Pin : MonoBehaviour
 {
     [SerializeField] private GameState _gameState;
+    [SerializeField] private Rigidbody _rb;
+    [SerializeField] private float _hitUpForce = 5;
     private bool _collided;
     private void OnCollisionEnter(Collision collision)
     {
@@ -12,15 +14,16 @@ public class Pin : MonoBehaviour
 
         if (collision.transform.CompareTag("Ball") || collision.transform.CompareTag("Pin"))
         {
-            StartCoroutine(CheckIfPinIsAlive());    
+            _collided = true;
+            StartCoroutine(CheckIfPinIsAlive());   
+            _rb.AddForce(Vector3.up * _hitUpForce, ForceMode.Impulse);
         }
     }
 
     // After pin is hit by the ball or another pin, check if it was tumbled
     IEnumerator CheckIfPinIsAlive()
     {
-        _collided = true;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(4);
         float angle = Vector3.Angle(transform.up, Vector3.up);
         if (angle != 0) // pin was tumbled
         {

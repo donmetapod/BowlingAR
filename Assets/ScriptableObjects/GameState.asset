@@ -42,5 +42,5 @@ MonoBehaviour:
   _currentTurn: 1
   _strikeCounter: 0
   MaxTurns: 5
-  _throwPowerMultiplier: 0.0025
+  _throwPowerMultiplier: 0.05
   TurnMaxDuration: 8

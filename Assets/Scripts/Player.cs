@@ -75,7 +75,7 @@ public class Player : MonoBehaviour
                     _ySwipeDelta = _touchFinalPosition.y - _touchInitialPosition.y;
                 }
                 _xSwipeDelta = _touchFinalPosition.x - _touchInitialPosition.x;
-                Messenger.Instance.EnqueueMessage($"x swipe delta {_xSwipeDelta}", 3);
+                // Messenger.Instance.EnqueueMessage($"x swipe delta {_xSwipeDelta}", 3);
                 
                 ThrowBall();
             }
