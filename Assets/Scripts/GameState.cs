@@ -115,6 +115,7 @@ public class GameState : ScriptableObject
         _remainingBalls = MaxTurns;
     }
     
+    
     public void LoadNewScene(string sceneName)
     {
         SceneLoader.LoadScene(sceneName);

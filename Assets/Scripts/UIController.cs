@@ -10,6 +10,9 @@ public class UIController : MonoBehaviour
     [SerializeField] private TMP_Text _remainingBallsUI;
     [SerializeField] private TMP_Text _finalScoreUI;
     [SerializeField] private GameObject _strikeUI;
+    [SerializeField] private GameObject _throwBallInstructions;
+    [SerializeField] private GameObject _throwBallInstructions2;
+    private bool _throwInstructionShowed;
     [SerializeField] private GameObject _gameOverScreen;
 
     private void OnEnable()
@@ -17,6 +20,7 @@ public class UIController : MonoBehaviour
         _gameState.OnScoreChanged.AddListener(UpdateScoreUI);
         _gameState.OnTurnEnded.AddListener(ShowNextTurnUI);
         _gameState.OnGameEnded.AddListener(ShowGameOverScreen);
+        _gameState.OnReadyToThrow.AddListener(ShowThrowBallInstructions);
         _gameState.OnBallInPlay.AddListener(UpdateAmountOfBallsUI);
         _gameState.OnGameEnded.AddListener(UpdateFinalScoreUI);
         _gameState.OnStrikeAchieved.AddListener(ShowStrikeUI);
@@ -27,6 +31,7 @@ public class UIController : MonoBehaviour
         _gameState.OnScoreChanged.RemoveListener(UpdateScoreUI);
         _gameState.OnTurnEnded.RemoveListener(ShowNextTurnUI);
         _gameState.OnGameEnded.RemoveListener(ShowGameOverScreen);
+        _gameState.OnReadyToThrow.RemoveListener(ShowThrowBallInstructions);
         _gameState.OnBallInPlay.RemoveListener(UpdateAmountOfBallsUI);
         _gameState.OnGameEnded.RemoveListener(UpdateFinalScoreUI);
         _gameState.OnStrikeAchieved.RemoveListener(ShowStrikeUI);
@@ -83,5 +88,26 @@ public class UIController : MonoBehaviour
     {
         _remainingBallsUI.text = $"Remaining balls {_gameState.RemainingBalls}";
     }
-    
+
+    void ShowThrowBallInstructions()
+    {
+        if(_throwInstructionShowed)
+            return;
+
+        _throwInstructionShowed = true;
+        _throwBallInstructions.SetActive(true);
+        Invoke("HideThrowBallInstructions", 4);
+    }
+
+    void HideThrowBallInstructions()
+    {
+        _throwBallInstructions.SetActive(false);
+        _throwBallInstructions2.SetActive(true);
+        Invoke("HideThrowBallInstructions2", 4);
+    }
+
+    void HideThrowBallInstructions2()
+    {
+        _throwBallInstructions2.SetActive(false);
+    }
 }
