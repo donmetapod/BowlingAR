@@ -38,9 +38,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _score: 0
-  _remainingBalls: 10
+  _remainingBalls: 20
   _currentTurn: 1
   _strikeCounter: 0
+  _strikeExtraPoints: 10
   MaxTurns: 5
   _throwPowerMultiplier: 0.05
   TurnMaxDuration: 8

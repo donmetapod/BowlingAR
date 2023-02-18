@@ -29,6 +29,7 @@ public class GameState : ScriptableObject
     [HideInInspector] public UnityEvent OnResettingDeck;
     [HideInInspector] public UnityEvent OnGameEnded;
     [HideInInspector] public UnityEvent<int> OnScoreChanged;
+   
     [SerializeField] private int _score;
     [SerializeField] private int _remainingBalls;
     [SerializeField] private int _currentTurn;

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform _arCamera;
     [SerializeField] private GameObject _ballPrefab;
     [SerializeField] private Stack<GameObject> _availableBalls = new Stack<GameObject>();
+    // [SerializeField] private List<GameObject> _availableBallsList = new List<GameObject>(); 
     private Vector2 _touchInitialPosition;
     private Vector2 _touchFinalPosition;
     private float _ySwipeDelta;
