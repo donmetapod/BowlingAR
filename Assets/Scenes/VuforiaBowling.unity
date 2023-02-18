@@ -1118,8 +1118,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score: 00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1254,8 +1255,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Place Pin Deck
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1489,8 +1491,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back to Title screen
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1868,8 +1871,9 @@ MonoBehaviour:
   m_text: Point your camera into a flat surface to create a lane and create a pin
     deck
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2166,8 +2170,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Score:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2395,8 +2400,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3645,8 +3651,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: PlayAgain
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4218,8 +4225,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Remaining balls: 10'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c0b38dbd64d57c644a256b89757a5eb3, type: 2}
+  m_sharedMaterial: {fileID: -117896264708763584, guid: c0b38dbd64d57c644a256b89757a5eb3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
