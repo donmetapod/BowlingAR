@@ -97,7 +97,6 @@ public class PinDeckController : MonoBehaviour
 
         // Go to next state after first pin deck is created
         _gameState.CurrentGameState = GameState.GameStateEnum.SetupBalls;
-        
     }
 
     // Creates a new deck for each throw

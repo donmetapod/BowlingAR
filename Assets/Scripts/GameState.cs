@@ -21,7 +21,7 @@ public class GameState : ScriptableObject
 
     [SerializeField] private GameStateEnum _currentGameState;
     
-    [HideInInspector] public UnityEvent OnEnterBallSetup;
+    public UnityEvent OnEnterBallSetup;
     [HideInInspector] public UnityEvent OnReadyToThrow;
     [HideInInspector] public UnityEvent OnBallInPlay;
     [HideInInspector] public UnityEvent OnStrikeAchieved;
@@ -117,6 +117,7 @@ public class GameState : ScriptableObject
     }
     
     
+    // Method used to load a scene
     public void LoadNewScene(string sceneName)
     {
         SceneLoader.LoadScene(sceneName);
@@ -126,4 +127,5 @@ public class GameState : ScriptableObject
     {
         Application.Quit();
     }
+    
 }

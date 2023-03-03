@@ -14,6 +14,7 @@ public class UIController : MonoBehaviour
     [SerializeField] private GameObject _throwBallInstructions2;
     private bool _throwInstructionShowed;
     [SerializeField] private GameObject _gameOverScreen;
+    [SerializeField] private float _turnWaitTime = 3;
 
     private void OnEnable()
     {
@@ -59,12 +60,14 @@ public class UIController : MonoBehaviour
     
     IEnumerator ShowNextTurnRoutine()
     {
+        // Increases the current turn number
         _gameState.CurrentTurn++;
+        
         if (_gameState.CurrentTurn <= _gameState.MaxTurns)
         {
             _nextTurnUI.gameObject.SetActive(true);
             _nextTurnUI.text = $"Turn {_gameState.CurrentTurn}";
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(_turnWaitTime);
             _nextTurnUI.gameObject.SetActive(false);
             _gameState.CurrentGameState = GameState.GameStateEnum.ResettingDeck;
         }
