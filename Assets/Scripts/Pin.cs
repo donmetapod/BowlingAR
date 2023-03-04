@@ -25,7 +25,7 @@ public class Pin : MonoBehaviour
     {
         yield return new WaitForSeconds(4);
         float angle = Vector3.Angle(transform.up, Vector3.up);
-        if (angle != 0) // pin was tumbled
+        if (angle != 0.5f) // pin was tumbled
         {
             _gameState.Score++;
             _gameState.StrikeCounter++;
